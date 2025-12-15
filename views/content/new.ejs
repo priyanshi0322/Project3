@@ -1,0 +1,49 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+    <h3>Create a New Listing</h3>
+    <br>
+    <form method="POST" action="/content"  novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="content[title]" placeholder="enter title" type="text" class="form-control" required>
+            <div class="valid-feedback">TITTLE LOOKS GOOD! </div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="content[description]"  class="form-control" required></textarea>
+            <div class="invalid-feedback">description should be valid </div>
+        </div>
+        <!-- <div class="mb-3">
+            <label for="image" class="form-label" class="form-label">Image Link</label>
+            <input name="content[image]" placeholder="enter image URL/Link" type="text" class="form-control">
+        </div> -->
+        <div class="mb-3">
+            <label for="image" class="form-label" class="form-label">Upload Image </label>
+            <input name="content[image]" type="file" class="form-control" required>
+        </div>
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input name="content[price]" placeholder="enter price" class="form-control" required>
+            <div class="invalid-feedback">Price should be valid </div>
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input name="content[country]" placeholder="enter country" type="text" class="form-control" required>
+            <div class="invalid-feedback">country should be valid </div>
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input name="content[location]" placeholder="enter location" type="text" class="form-control" required>
+            <div class="invalid-feedback">location should be valid</div>
+        </div>
+        <br>
+        <button class="btn btn-dark add-btn">Add</button>
+        <br>
+        <br>
+        <br>
+    </form>
+</div>
+</div>
